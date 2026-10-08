@@ -1,0 +1,1984 @@
+@font-face {
+  font-family: Archivo;
+  src: url("/redesign/fonts/archivo-latin-wght-normal.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("/redesign/fonts/ibm-plex-mono-latin-400-normal.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.adva-design {
+  --carbon: #171a19;
+  --concrete: #f4f4f0;
+  --white: #fff;
+  --steel: #555b57;
+  --line: #d5d6cf;
+  --brand: #6d28d9;
+  --brand-light: #c7aaff;
+  --error: #aa241d;
+  --space: clamp(24px, 4.4vw, 72px);
+  background: var(--concrete);
+  color: var(--carbon);
+  font:
+    400 1rem/1.6 Archivo,
+    Arial,
+    Helvetica,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.adva-design * {
+  box-sizing: border-box;
+}
+.adva-design a {
+  color: inherit;
+  text-decoration: none;
+}
+.adva-design button,
+.adva-design input,
+.adva-design textarea,
+.adva-design select {
+  font: inherit;
+}
+.adva-design button {
+  cursor: pointer;
+}
+.adva-design button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+.adva-design img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.adva-design figure,
+.adva-design p,
+.adva-design h1,
+.adva-design h2,
+.adva-design h3 {
+  margin: 0;
+}
+.adva-design button:focus-visible,
+.adva-design a:focus-visible,
+.adva-design input:focus-visible,
+.adva-design select:focus-visible,
+.adva-design textarea:focus-visible,
+.adva-design fieldset:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 5px;
+}
+.adva-design [tabindex="-1"]:focus {
+  outline: none;
+}
+.adva-design fieldset[tabindex="-1"]:focus-visible {
+  outline: 3px solid var(--brand);
+}
+.adva-design h1,
+.adva-design h2,
+.adva-design h3 {
+  font-weight: 550;
+  letter-spacing: -0.045em;
+  line-height: 1.04;
+  text-wrap: balance;
+}
+.adva-design h1 {
+  font-size: clamp(3.25rem, 7.55vw, 7.4rem);
+}
+.adva-design h2 {
+  font-size: clamp(2.45rem, 4.3vw, 4.5rem);
+}
+.adva-design h3 {
+  font-size: 1.8rem;
+}
+.adva-design p {
+  overflow-wrap: break-word;
+}
+.adva-design ::selection {
+  background: var(--brand);
+  color: white;
+}
+.adva-container {
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: var(--space);
+}
+.adva-eyebrow,
+.adva-mono {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  letter-spacing: 0.055em;
+}
+.adva-eyebrow {
+  display: block;
+  text-transform: uppercase;
+}
+.adva-skip {
+  position: fixed;
+  z-index: 100;
+  top: 12px;
+  left: 12px;
+  padding: 12px 20px;
+  background: white;
+  transform: translateY(-180%);
+}
+.adva-skip:focus {
+  transform: none;
+}
+.adva-preview-notice {
+  padding: 8px var(--space);
+  background: var(--carbon);
+  color: #e3e5df;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 0.75rem;
+  min-height: 34px;
+}
+.adva-preview-notice > span:first-child {
+  font-family: "IBM Plex Mono", monospace;
+  letter-spacing: 0.05em;
+  color: #c7aaff;
+}
+.adva-preview-notice a {
+  margin-left: auto;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.adva-header {
+  height: 104px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-inline: var(--space);
+  border-bottom: 1px solid var(--line);
+  background: var(--concrete);
+}
+.adva-wordmark {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 8px;
+  white-space: nowrap;
+}
+.adva-wordmark strong {
+  font-weight: 800;
+  font-size: 2.5rem;
+  letter-spacing: -0.075em;
+}
+.adva-wordmark > span {
+  font-size: 0.55rem;
+  letter-spacing: 0.16em;
+  font-weight: 600;
+}
+.brand-period {
+  color: var(--brand);
+}
+.adva-desktop-nav {
+  display: flex;
+  gap: 36px;
+  margin-left: auto;
+  font-size: 0.875rem;
+}
+.adva-desktop-nav a {
+  padding: 14px 0;
+  position: relative;
+}
+.adva-desktop-nav a:after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  bottom: 5px;
+  left: 0;
+  width: 100%;
+  background: var(--brand);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 180ms ease;
+}
+.adva-desktop-nav a:hover:after,
+.adva-desktop-nav a.active:after {
+  transform: scaleX(1);
+}
+.adva-button {
+  min-height: 48px;
+  padding: 14px 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--carbon);
+  color: var(--white) !important;
+  border: 1px solid transparent;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 1.4;
+  transition:
+    background 180ms,
+    color 180ms,
+    border-color 180ms;
+}
+.adva-button:hover {
+  background: #303733;
+}
+.adva-button-brand {
+  background: var(--brand);
+}
+.adva-button-brand:hover {
+  background: #5320a5;
+}
+.adva-button-white {
+  background: var(--white);
+  color: var(--carbon) !important;
+}
+.adva-button-white:hover {
+  background: #e8e9e2;
+}
+.adva-button-outline {
+  background: transparent;
+  color: var(--carbon) !important;
+  border-color: var(--line);
+}
+.adva-button-outline:hover {
+  background: #e5e6df;
+}
+.adva-text-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  border: 0;
+  background: none;
+  border-bottom: 1px solid currentColor;
+  line-height: 1.4;
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 0;
+  text-align: left;
+  transition: color 180ms;
+}
+.adva-text-link:hover {
+  color: var(--brand);
+}
+.adva-menu-toggle {
+  display: none;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  border: 1px solid var(--line);
+  background: transparent;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+.adva-menu-toggle span {
+  width: 19px;
+  height: 2px;
+  background: var(--carbon);
+}
+.adva-mobile-menu {
+  padding: 28px;
+  border: 0;
+  width: min(100vw, 560px);
+  max-width: 100vw;
+  max-height: 100dvh;
+  background: var(--concrete);
+  color: var(--carbon);
+}
+.adva-mobile-menu::backdrop {
+  background: rgb(10 15 12 / 0.75);
+}
+.adva-menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.adva-menu-heading h2 {
+  font-size: 1.2rem;
+}
+.adva-close {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  line-height: 1;
+  border: 1px solid var(--line);
+  background: transparent;
+}
+.adva-mobile-menu nav {
+  margin-top: 38px;
+}
+.adva-mobile-menu nav a {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  font-size: 1.8rem;
+  padding: 20px 0;
+  border-top: 1px solid var(--line);
+  letter-spacing: -0.04em;
+}
+.adva-mobile-menu nav a .adva-mono {
+  color: var(--brand);
+}
+.adva-menu-contact {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.adva-menu-open {
+  overflow: hidden;
+}
+.adva-home-hero {
+  padding-top: 26px;
+  padding-bottom: 0;
+}
+.adva-hero-index {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  align-items: center;
+}
+.adva-hero-index > .adva-mono {
+  color: var(--steel);
+}
+.adva-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 38px;
+  padding-top: 42px;
+  padding-bottom: 38px;
+  align-items: start;
+}
+.adva-small-rule {
+  display: block;
+  width: 36px;
+  height: 3px;
+  background: var(--brand);
+  margin-bottom: 30px;
+}
+.adva-hero-copy :is(h1, h2) {
+  font-size: clamp(3.6rem, 7.65vw, 7.8rem);
+  font-weight: 520;
+  letter-spacing: -0.06em;
+  line-height: 0.99;
+}
+.adva-hero-copy :is(h1, h2) > span {
+  color: var(--brand);
+}
+.adva-hero-copy > p {
+  font-size: 1rem;
+  line-height: 1.65;
+  margin-top: 30px;
+  color: var(--steel);
+}
+.adva-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  align-items: center;
+  margin-top: 30px;
+}
+.adva-hero-footnote {
+  margin-top: 47px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.adva-survey-mark {
+  font: 300 2.2rem/1 Archivo;
+  display: inline-block;
+  color: var(--brand);
+}
+.adva-hero-footnote .adva-mono {
+  color: var(--steel);
+  font-size: 0.7rem;
+}
+.adva-hero-image {
+  margin-top: 24px !important;
+  position: relative;
+}
+.adva-hero-image picture {
+  display: block;
+}
+.adva-hero-image img {
+  width: 100%;
+  aspect-ratio: 0.96;
+  object-fit: cover;
+  object-position: 47% 50%;
+}
+.adva-image-label {
+  position: absolute;
+  left: -20px;
+  bottom: 76px;
+  background: var(--concrete);
+  padding: 18px 24px;
+  border-left: 3px solid var(--brand);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.adva-image-label .adva-mono {
+  font-size: 0.65rem;
+  color: var(--steel);
+}
+.adva-image-label > span:last-child {
+  font-size: 0.95rem;
+}
+.adva-hero-image figcaption {
+  font:
+    400 0.65rem/1.6 "IBM Plex Mono",
+    monospace;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 16px;
+  color: var(--steel);
+}
+.adva-hero-scope-line {
+  border-top: 1px solid var(--line);
+  padding: 25px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.875rem;
+}
+.adva-hero-scope-line .adva-eyebrow {
+  color: var(--brand);
+}
+.adva-services-summary {
+  background: var(--carbon);
+  color: var(--concrete);
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  padding: 96px var(--space);
+  margin-top: 28px;
+}
+.adva-services-intro .adva-eyebrow {
+  color: var(--brand-light);
+}
+.adva-services-intro h2 {
+  margin-top: 34px;
+  max-width: 440px;
+}
+.adva-services-intro p {
+  margin-top: 24px;
+  color: #c4c9c3;
+}
+.adva-services-intro .adva-text-link {
+  margin-top: 40px;
+}
+.adva-service-list {
+  border-top: 1px solid #444a44;
+}
+.adva-service-list > a {
+  display: grid;
+  grid-template-columns: 36px 1fr 30px;
+  gap: 24px;
+  border-bottom: 1px solid #444a44;
+  padding: 26px 0;
+  align-items: start;
+  transition: color 180ms;
+}
+.adva-service-list > a > .adva-mono {
+  padding-top: 6px;
+  color: var(--brand-light);
+}
+.adva-service-list h3 {
+  font-size: clamp(1.35rem, 2.1vw, 2rem);
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+.adva-service-list p {
+  font-size: 0.875rem;
+  color: #c4c9c3;
+  margin-top: 12px;
+  line-height: 1.6;
+}
+.adva-service-plus {
+  font: 300 1.8rem/1 Archivo;
+  color: var(--brand-light);
+}
+.adva-service-list > a:hover h3 {
+  color: var(--brand-light);
+}
+.adva-work-summary {
+  padding-top: 102px;
+  padding-bottom: 100px;
+}
+.adva-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 52px;
+}
+.adva-section-heading h2 {
+  margin-top: 26px;
+}
+.adva-section-heading > .adva-text-link {
+  margin-bottom: 5px;
+}
+.adva-work-pair {
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 58px;
+  align-items: start;
+}
+.adva-work-pair img {
+  width: 100%;
+  aspect-ratio: 1.36;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.adva-work-pair figure > a {
+  display: block;
+  overflow: hidden;
+}
+.adva-work-pair figure > a:hover img {
+  transform: scale(1.025);
+}
+.adva-work-pair figcaption {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 1rem;
+}
+.adva-work-pair figcaption > span:first-child {
+  font: 0.7rem/1.6 "IBM Plex Mono";
+  color: var(--steel);
+}
+.adva-work-secondary {
+  padding-top: 120px;
+}
+.adva-work-secondary img {
+  aspect-ratio: 0.86;
+  object-position: center 60%;
+}
+.adva-company {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding-top: 65px;
+  padding-bottom: 90px;
+  border-top: 1px solid var(--line);
+}
+.adva-company h2 {
+  margin-top: 25px;
+}
+.adva-company-copy .adva-large-copy {
+  font-size: 1.7rem;
+  line-height: 1.5;
+  letter-spacing: -0.03em;
+  max-width: 650px;
+}
+.adva-company-copy > p + p {
+  margin-top: 25px;
+  color: var(--steel);
+  max-width: 590px;
+}
+.adva-contact-people {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 38px;
+  border-top: 1px solid var(--line);
+  padding-top: 28px;
+}
+.adva-contact-people > div {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.875rem;
+}
+.adva-contact-people a {
+  color: var(--steel);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 6px 0;
+}
+.adva-bid-band {
+  background: var(--brand);
+  color: white;
+  padding: 72px var(--space);
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.adva-bid-band h2 {
+  margin-top: 22px;
+}
+.adva-bid-band > div:last-child {
+  max-width: 360px;
+  justify-self: end;
+}
+.adva-bid-band p {
+  line-height: 1.65;
+}
+.adva-bid-band .adva-button {
+  margin-top: 26px;
+}
+.adva-footer {
+  background: var(--carbon);
+  color: var(--concrete);
+  padding: 60px var(--space) 22px;
+}
+.adva-footer-top {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #424a43;
+}
+.adva-footer .adva-wordmark strong {
+  font-size: 3rem;
+}
+.adva-footer .brand-period {
+  color: var(--brand-light);
+}
+.adva-footer-top > p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #c3c9c1;
+}
+.adva-footer-top > .adva-button {
+  margin-left: auto;
+}
+.adva-footer-info {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 0.8fr;
+  gap: 40px;
+  padding: 38px 0;
+}
+.adva-footer-info > div {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.adva-footer-info .adva-eyebrow {
+  color: #b4bdb5;
+  margin-bottom: 18px;
+}
+.adva-footer-info a,
+.adva-footer-info address {
+  font-size: 0.875rem;
+  font-style: normal;
+  line-height: 1.8;
+}
+.adva-footer-info a {
+  padding: 5px 0;
+}
+.adva-footer-info nav {
+  display: flex;
+  gap: 28px;
+  justify-content: flex-end;
+}
+.adva-footer-bottom {
+  border-top: 1px solid #424a43;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  font-size: 0.7rem;
+  color: #c3c9c1;
+}
+.adva-footer-bottom > span:nth-child(2) {
+  font-family: "IBM Plex Mono";
+}
+.adva-page-intro {
+  padding-top: 55px;
+  padding-bottom: 40px;
+}
+.adva-page-intro > div:not(.adva-gallery-filter) {
+  display: grid;
+  grid-template-columns: 1.65fr 1fr;
+  align-items: end;
+  gap: 60px;
+  margin-top: 38px;
+}
+.adva-page-intro h1 {
+  font-size: clamp(3rem, 6.4vw, 6.5rem);
+}
+.adva-page-intro h1 span {
+  color: var(--brand);
+}
+.adva-page-intro > div > p {
+  max-width: 350px;
+  color: var(--steel);
+  padding-bottom: 6px;
+}
+.adva-scope-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 55px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+.adva-scope-nav a {
+  display: flex;
+  gap: 12px;
+  font-size: 0.875rem;
+  min-height: 44px;
+  align-items: center;
+}
+.adva-scope-nav span {
+  font: 0.75rem "IBM Plex Mono";
+  color: var(--brand);
+}
+.adva-service-details {
+  padding-bottom: 80px;
+}
+.adva-service-detail {
+  scroll-margin-top: 24px;
+  border-top: 1px solid var(--line);
+  padding: 60px 0;
+  display: grid;
+  grid-template-columns: 70px 1fr 1fr;
+  gap: 40px;
+}
+.adva-service-number {
+  color: var(--brand);
+  padding-top: 8px;
+}
+.adva-service-detail h2 {
+  font-size: clamp(2rem, 3.6vw, 3.4rem);
+  max-width: 470px;
+}
+.adva-service-detail-copy > p {
+  margin-top: 25px;
+  color: var(--steel);
+  max-width: 450px;
+}
+.adva-service-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 14px;
+  font-size: 0.875rem;
+}
+.adva-service-detail li {
+  padding: 10px 0;
+  border-top: 1px solid var(--line);
+}
+.adva-service-detail img {
+  width: 100%;
+  aspect-ratio: 1.25;
+  object-fit: cover;
+}
+.adva-service-detail figcaption {
+  font: 0.7rem/1.6 "IBM Plex Mono";
+  padding-top: 12px;
+  color: var(--steel);
+}
+.adva-environmental-note {
+  background: #e6e7df;
+  padding: 35px;
+  align-self: start;
+  border-left: 3px solid var(--brand);
+}
+.adva-environmental-note h3 {
+  margin-top: 28px;
+  font-size: 2.5rem;
+}
+.adva-environmental-note p {
+  margin-top: 22px;
+  color: var(--steel);
+  font-size: 0.875rem;
+  max-width: 360px;
+}
+.adva-gallery-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 45px;
+  border-top: 1px solid var(--line);
+  padding-top: 25px;
+}
+.adva-gallery-filter button {
+  font-size: 0.875rem;
+  background: transparent;
+  padding: 12px 17px;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  color: var(--carbon);
+  transition:
+    background 160ms,
+    color 160ms;
+}
+.adva-gallery-filter button[aria-pressed="true"] {
+  background: var(--carbon);
+  color: white;
+  border-color: var(--carbon);
+}
+.adva-gallery-filter button:hover {
+  border-color: var(--brand);
+}
+.adva-gallery-source {
+  margin-top: 22px !important;
+  font-size: 0.875rem;
+  color: var(--steel);
+  max-width: 750px;
+}
+.adva-gallery {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 65px 56px;
+  padding-top: 18px;
+  padding-bottom: 90px;
+  align-items: start;
+}
+.adva-gallery-item > button {
+  border: 0;
+  padding: 0;
+  background: var(--carbon);
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+.adva-gallery-item img {
+  width: 100%;
+  aspect-ratio: 1.45;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+.adva-gallery-item.portrait img {
+  aspect-ratio: 1.02;
+}
+.adva-gallery-item > button:hover img {
+  transform: scale(1.025);
+}
+.adva-gallery-zoom {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 44px;
+  height: 44px;
+  background: var(--concrete);
+  font: 300 1.8rem/44px Archivo;
+  color: var(--carbon);
+}
+.adva-gallery-item figcaption {
+  margin-top: 20px;
+}
+.adva-gallery-item figcaption .adva-mono {
+  color: var(--steel);
+}
+.adva-gallery-item h2 {
+  font-size: 1.5rem;
+  margin-top: 8px;
+}
+.adva-gallery-item:nth-child(even) {
+  margin-top: 70px;
+}
+.adva-lightbox {
+  background: var(--carbon);
+  color: white;
+  width: min(1100px, 94vw);
+  max-height: 94dvh;
+  overflow: auto;
+  border: 0;
+  padding: 28px;
+}
+.adva-lightbox::backdrop {
+  background: rgb(0 0 0 / 0.85);
+}
+.adva-lightbox > .adva-close {
+  margin-left: auto;
+  margin-bottom: 14px;
+  color: white;
+  border-color: #5a635b;
+}
+.adva-lightbox figure img {
+  width: 100%;
+  height: 60dvh;
+  object-fit: contain;
+}
+.adva-lightbox figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px 0;
+  font-size: 1rem;
+}
+.adva-lightbox figcaption span {
+  font: 0.75rem "IBM Plex Mono";
+}
+.adva-lightbox-controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.adva-bid-page {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 80px;
+  padding-block: 70px 110px;
+  align-items: start;
+}
+.adva-bid-aside {
+  position: sticky;
+  top: 30px;
+}
+.adva-bid-aside h1 {
+  font-size: clamp(3rem, 4.9vw, 5.25rem);
+  margin-top: 30px;
+}
+.adva-bid-aside h1 span {
+  color: var(--brand);
+}
+.adva-bid-aside > p {
+  margin-top: 26px;
+  color: var(--steel);
+  max-width: 370px;
+}
+.adva-bid-contact {
+  border-top: 1px solid var(--line);
+  padding-top: 24px;
+  margin-top: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 9px;
+}
+.adva-bid-contact > a {
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  min-height: 44px;
+}
+.adva-bid-contact > span:last-child {
+  font-size: 0.875rem;
+  color: var(--steel);
+}
+.adva-prototype-note {
+  margin-top: 40px;
+  border-left: 3px solid var(--brand);
+  background: #e8e5ee;
+  padding: 20px;
+  max-width: 370px;
+  font-size: 0.875rem;
+}
+.adva-prototype-note p {
+  margin-top: 10px;
+  color: #474051;
+}
+.adva-bid-form-area {
+  min-width: 0;
+}
+.adva-stepper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  padding: 0;
+  margin: 0 0 38px;
+  gap: 12px;
+}
+.adva-stepper li {
+  border-top: 2px solid var(--line);
+  padding-top: 14px;
+  font-size: 0.875rem;
+  color: var(--steel);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.adva-stepper li > span {
+  font: 0.75rem "IBM Plex Mono";
+}
+.adva-stepper .current {
+  color: var(--brand);
+  border-color: var(--brand);
+  font-weight: 600;
+}
+.adva-stepper .complete {
+  border-color: var(--carbon);
+  color: var(--carbon);
+}
+.adva-bid-form-area h2 {
+  font-size: clamp(1.8rem, 2.8vw, 2.75rem);
+  line-height: 1.1;
+}
+.adva-form-intro {
+  color: var(--steel);
+  margin-top: 16px !important;
+  margin-bottom: 30px !important;
+  font-size: 0.9375rem;
+}
+.adva-form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px 22px;
+}
+.adva-form-grid > .wide {
+  grid-column: 1/-1;
+}
+.adva-field {
+  min-width: 0;
+}
+.adva-field label,
+.adva-field legend {
+  font-size: 0.875rem;
+  font-weight: 550;
+  margin-bottom: 9px;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  align-items: center;
+}
+.adva-field label > span,
+.adva-field legend > span {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--steel);
+}
+.adva-field input:not([type="checkbox"]),
+.adva-field select,
+.adva-field textarea {
+  display: block;
+  border: 1px solid #a6aca5;
+  background: white;
+  width: 100%;
+  min-height: 52px;
+  border-radius: 0;
+  padding: 12px 14px;
+  color: var(--carbon);
+  line-height: 1.6;
+  font-size: 1rem;
+  min-width: 0;
+}
+.adva-field textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.adva-field [aria-invalid="true"] {
+  border-color: var(--error) !important;
+}
+.adva-field-hint {
+  font-size: 0.8125rem;
+  line-height: 1.65;
+  color: var(--steel);
+  margin-top: 10px !important;
+}
+.adva-field-error {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--error);
+  margin-top: 9px !important;
+}
+.adva-scope-field {
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+.adva-scope-field legend {
+  float: none;
+  width: 100%;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+.adva-scope-field > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.adva-scope-field > div > label {
+  justify-content: flex-start;
+  font-size: 0.875rem;
+  background: white;
+  border: 1px solid #a6aca5;
+  margin: 0;
+  padding: 14px 12px;
+  min-height: 52px;
+  cursor: pointer;
+}
+.adva-scope-field > div > label:has(input:checked) {
+  border-color: var(--brand);
+  background: #f2eafb;
+}
+.adva-scope-field input {
+  accent-color: var(--brand);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+.adva-error-summary {
+  border: 1px solid var(--error);
+  border-left: 3px solid var(--error);
+  background: #fff7f5;
+  padding: 18px 22px;
+  margin-bottom: 25px;
+  color: var(--error);
+  font-size: 0.875rem;
+}
+.adva-error-summary ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+.adva-error-summary a {
+  text-decoration: underline;
+}
+.adva-error-summary a:focus-visible {
+  outline-color: var(--error);
+}
+.adva-error-summary:focus {
+  outline: 3px solid var(--error) !important;
+  outline-offset: 3px;
+}
+.adva-submit-error {
+  color: var(--error);
+  margin-top: 20px !important;
+}
+.adva-form-actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 34px;
+  flex-wrap: wrap;
+}
+.adva-form-actions > .adva-mono {
+  margin-left: auto;
+  color: var(--steel);
+}
+.adva-document-note {
+  border: 1px solid var(--line);
+  padding: 20px 22px;
+  font-size: 0.875rem;
+  background: #e9ebe3;
+}
+.adva-document-note > p {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: var(--steel);
+}
+.adva-form-privacy {
+  font-size: 0.875rem;
+  color: var(--steel);
+  border-top: 1px solid var(--line);
+  padding-top: 20px;
+}
+.adva-bid-review > section {
+  margin-bottom: 28px;
+}
+.adva-bid-review > section > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 12px;
+}
+.adva-bid-review h3 {
+  font-size: 1.4rem;
+}
+.adva-bid-review dl {
+  margin-top: 18px;
+}
+.adva-bid-review dl > div,
+.adva-draft-ready dl > div {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
+  margin: 14px 0;
+  font-size: 0.875rem;
+}
+.adva-bid-review dt,
+.adva-draft-ready dt {
+  color: var(--steel);
+}
+.adva-bid-review dd,
+.adva-draft-ready dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  white-space: pre-wrap;
+}
+.adva-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+.adva-draft-ready {
+  border-top: 2px solid var(--brand);
+  padding-top: 30px;
+}
+.adva-ready-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #e5ece0;
+  color: #263d27;
+  font-size: 1.5rem;
+  margin-bottom: 22px;
+}
+.adva-draft-ready h2 {
+  margin-top: 20px;
+}
+.adva-draft-ready > p {
+  margin-top: 20px;
+}
+.adva-draft-ready dl {
+  border-top: 1px solid var(--line);
+  padding-top: 15px;
+  margin-top: 25px;
+}
+.adva-directions-intro {
+  padding-block: 45px;
+}
+.adva-directions-intro h1 {
+  font-size: 3.4rem;
+  max-width: 800px;
+  margin-top: 22px;
+}
+.adva-directions-intro > p {
+  max-width: 850px;
+  color: var(--steel);
+  margin-top: 24px;
+}
+.adva-directions-table {
+  margin-top: 30px;
+  overflow: auto;
+}
+.adva-directions-table table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 680px;
+  font-size: 0.875rem;
+}
+.adva-directions-table th,
+.adva-directions-table td {
+  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+.adva-directions-table th {
+  font-weight: 600;
+}
+.adva-direction-switch {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-top: 28px;
+}
+.adva-direction-switch button {
+  padding: 18px 22px;
+  background: transparent;
+  border: 1px solid #a6aca5;
+  min-height: 58px;
+  font-size: 0.875rem;
+}
+.adva-direction-switch button[aria-pressed="true"] {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: white;
+}
+.adva-carbon {
+  background: #171a19;
+  color: white;
+}
+.adva-carbon-hero {
+  position: relative;
+  min-height: 790px;
+  display: flex;
+  align-items: center;
+  padding: 80px var(--space);
+}
+.adva-carbon-hero > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 70% center;
+}
+.adva-carbon-hero:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(8, 13, 12, 0.88),
+    rgba(8, 13, 12, 0.42) 65%,
+    rgba(8, 13, 12, 0.1)
+  );
+}
+.adva-carbon-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 860px;
+}
+.adva-carbon-copy .adva-eyebrow {
+  color: #d5c0ff;
+}
+.adva-carbon-copy h2 {
+  font-weight: 750;
+  font-size: clamp(3.6rem, 7.5vw, 7rem);
+  margin-top: 32px;
+  letter-spacing: -0.055em;
+}
+.adva-carbon-copy h2 span {
+  color: #cdb2ff;
+}
+.adva-carbon-copy p {
+  margin-top: 30px;
+  max-width: 420px;
+}
+.adva-carbon-copy .adva-hero-actions {
+  margin-top: 32px;
+}
+.adva-carbon-capabilities {
+  padding: 40px var(--space);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+.adva-carbon-capabilities > div {
+  border-top: 1px solid #51554e;
+  padding-top: 20px;
+}
+.adva-carbon-capabilities .adva-mono {
+  color: #cdb2ff;
+}
+.adva-carbon-capabilities h3 {
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+.adva-direction-caption {
+  padding: 25px var(--space);
+  border-block: 1px solid var(--line);
+  font-size: 0.875rem;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+.adva-direction-caption strong {
+  color: var(--brand);
+}
+@media (min-width: 1600px) {
+  .adva-header,
+  .adva-services-summary,
+  .adva-bid-band,
+  .adva-footer {
+    padding-left: max(var(--space), calc((100vw - 1456px) / 2));
+    padding-right: max(var(--space), calc((100vw - 1456px) / 2));
+  }
+}
+@media (max-width: 1100px) {
+  .adva-header {
+    gap: 28px;
+  }
+  .adva-desktop-nav {
+    gap: 24px;
+  }
+  .adva-hero-grid {
+    gap: 28px;
+  }
+  .adva-hero-copy :is(h1, h2) {
+    font-size: 7.55vw;
+  }
+  .adva-hero-copy > p {
+    font-size: 0.9375rem;
+  }
+  .adva-hero-footnote {
+    margin-top: 35px;
+  }
+  .adva-services-summary {
+    gap: 50px;
+    padding-block: 75px;
+  }
+  .adva-company {
+    gap: 45px;
+  }
+  .adva-bid-page {
+    gap: 45px;
+  }
+  .adva-service-detail {
+    grid-template-columns: 38px 1fr 1fr;
+    gap: 24px;
+  }
+  .adva-service-detail ul {
+    grid-template-columns: 1fr;
+  }
+  .adva-work-pair {
+    gap: 38px;
+  }
+  .adva-footer-info nav {
+    flex-direction: column;
+    gap: 0;
+  }
+  .adva-page-intro > div:not(.adva-gallery-filter) {
+    gap: 40px;
+  }
+}
+@media (max-width: 800px) {
+  .adva-header {
+    height: 88px;
+    gap: 20px;
+  }
+  .adva-desktop-nav {
+    display: none;
+  }
+  .adva-header-bid {
+    margin-left: auto;
+  }
+  .adva-menu-toggle {
+    display: flex;
+  }
+  .adva-wordmark strong {
+    font-size: 2.1rem;
+  }
+  .adva-wordmark > span {
+    font-size: 0.5rem;
+  }
+  .adva-hero-index > .adva-mono {
+    display: none;
+  }
+  .adva-home-hero {
+    padding-top: 22px;
+  }
+  .adva-hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding-top: 30px;
+  }
+  .adva-hero-copy :is(h1, h2) {
+    font-size: 7.5vw;
+  }
+  .adva-hero-copy > p br {
+    display: none;
+  }
+  .adva-hero-actions {
+    gap: 20px;
+  }
+  .adva-hero-footnote {
+    display: none;
+  }
+  .adva-hero-image img {
+    aspect-ratio: 0.7;
+  }
+  .adva-image-label {
+    left: -12px;
+    bottom: 65px;
+    padding: 12px 16px;
+  }
+  .adva-hero-image figcaption {
+    font-size: 0.6rem;
+    flex-direction: column;
+    gap: 2px;
+  }
+  .adva-hero-scope-line {
+    justify-content: flex-start;
+    gap: 14px 25px;
+  }
+  .adva-hero-scope-line > .adva-eyebrow {
+    width: 100%;
+  }
+  .adva-services-summary {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .adva-services-intro h2 {
+    max-width: 500px;
+  }
+  .adva-services-intro .adva-text-link {
+    margin-top: 25px;
+  }
+  .adva-service-list > a {
+    padding: 25px 0;
+  }
+  .adva-work-summary {
+    padding-block: 70px;
+  }
+  .adva-work-secondary {
+    padding-top: 85px;
+  }
+  .adva-work-pair {
+    gap: 25px;
+  }
+  .adva-company {
+    padding-block: 50px 70px;
+    gap: 30px;
+  }
+  .adva-company-copy .adva-large-copy {
+    font-size: 1.3rem;
+  }
+  .adva-contact-people {
+    gap: 20px;
+  }
+  .adva-bid-band {
+    gap: 40px;
+    padding-block: 60px;
+  }
+  .adva-footer-top {
+    gap: 32px;
+  }
+  .adva-footer-info {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+  .adva-footer-info nav {
+    flex-direction: row;
+    justify-content: flex-start;
+    grid-column: 1/-1;
+    gap: 30px;
+  }
+  .adva-footer-bottom {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .adva-footer-bottom > span:nth-child(2) {
+    display: none;
+  }
+  .adva-service-detail {
+    grid-template-columns: 30px 1fr;
+  }
+  .adva-service-detail > div:last-child,
+  .adva-service-detail > aside {
+    grid-column: 2;
+  }
+  .adva-service-detail figure {
+    max-width: 700px;
+  }
+  .adva-bid-page {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    padding-top: 45px;
+  }
+  .adva-bid-aside {
+    position: static;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .adva-bid-aside > .adva-eyebrow {
+    grid-column: 1/-1;
+  }
+  .adva-bid-aside h1 {
+    margin-top: 0;
+    font-size: 3.4rem;
+  }
+  .adva-bid-aside > p {
+    margin-top: 0;
+    align-self: center;
+  }
+  .adva-bid-contact {
+    display: none;
+  }
+  .adva-prototype-note {
+    grid-column: 1/-1;
+    max-width: none;
+    margin-top: 8px;
+  }
+  .adva-prototype-note p:last-child {
+    display: none;
+  }
+  .adva-page-intro > div:not(.adva-gallery-filter) {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .adva-page-intro > div > p {
+    max-width: 570px;
+  }
+  .adva-gallery {
+    gap: 45px 30px;
+  }
+  .adva-gallery-item:nth-child(even) {
+    margin-top: 45px;
+  }
+  .adva-carbon-capabilities {
+    grid-template-columns: 1fr 1fr;
+  }
+  .adva-direction-caption {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+@media (max-width: 600px) {
+  .adva-preview-notice {
+    gap: 10px;
+    padding-block: 7px;
+    font-size: 0.65rem;
+  }
+  .adva-preview-notice > span:nth-child(2) {
+    display: none;
+  }
+  .adva-preview-notice a {
+    font-size: 0.7rem;
+  }
+  .adva-header {
+    height: 83px;
+    gap: 12px;
+  }
+  .adva-wordmark strong {
+    font-size: 1.85rem;
+  }
+  .adva-wordmark > span {
+    font-size: 0.42rem;
+  }
+  .adva-header-bid {
+    padding: 12px 14px;
+    min-height: 44px;
+    font-size: 0.8125rem;
+  }
+  .adva-menu-toggle {
+    width: 44px;
+    height: 44px;
+  }
+  .adva-hero-grid {
+    grid-template-columns: 1fr;
+    padding-top: 30px;
+    gap: 32px;
+    padding-bottom: 28px;
+  }
+  .adva-hero-copy :is(h1, h2) {
+    font-size: clamp(3.25rem, 13.8vw, 5.15rem);
+    line-height: 1.01;
+    letter-spacing: -0.058em;
+  }
+  .adva-small-rule {
+    margin-bottom: 22px;
+  }
+  .adva-hero-copy > p {
+    margin-top: 22px;
+    font-size: 1rem;
+    max-width: 360px;
+  }
+  .adva-hero-actions {
+    margin-top: 24px;
+    gap: 15px 22px;
+  }
+  .adva-hero-image {
+    margin-top: 0 !important;
+  }
+  .adva-hero-image img {
+    aspect-ratio: 1.15;
+    object-position: 48% 50%;
+  }
+  .adva-image-label {
+    left: 0;
+    bottom: 50px;
+    padding: 10px 14px;
+  }
+  .adva-image-label .adva-mono {
+    font-size: 0.6rem;
+  }
+  .adva-image-label > span:last-child {
+    font-size: 0.8rem;
+  }
+  .adva-hero-image figcaption {
+    font-size: 0.6rem;
+    flex-direction: row;
+    gap: 10px;
+  }
+  .adva-hero-image figcaption > span:last-child {
+    display: none;
+  }
+  .adva-hero-index .adva-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.03em;
+  }
+  .adva-hero-scope-line {
+    padding-block: 21px;
+    gap: 10px 24px;
+    font-size: 0.8rem;
+  }
+  .adva-hero-scope-line > span {
+    width: calc(50% - 14px);
+  }
+  .adva-hero-scope-line > .adva-eyebrow {
+    width: 100%;
+  }
+  .adva-services-summary {
+    margin-top: 16px;
+    padding-block: 55px;
+  }
+  .adva-services-intro h2 {
+    margin-top: 24px;
+  }
+  .adva-service-list > a {
+    gap: 14px;
+    grid-template-columns: 28px 1fr 24px;
+    padding: 23px 0;
+  }
+  .adva-service-list h3 {
+    font-size: 1.45rem;
+  }
+  .adva-service-list p {
+    font-size: 0.875rem;
+  }
+  .adva-services-summary .adva-text-link:hover {
+    color: var(--brand-light);
+  }
+  .adva-section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 22px;
+    margin-bottom: 32px;
+  }
+  .adva-section-heading h2 {
+    margin-top: 22px;
+  }
+  .adva-work-pair {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .adva-work-secondary {
+    padding-top: 0;
+    margin-left: 17%;
+  }
+  .adva-work-secondary img {
+    aspect-ratio: 0.95;
+  }
+  .adva-work-pair figcaption {
+    padding-top: 15px;
+  }
+  .adva-company {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .adva-company-copy .adva-large-copy {
+    font-size: 1.4rem;
+  }
+  .adva-contact-people {
+    gap: 30px;
+  }
+  .adva-bid-band {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-block: 50px;
+  }
+  .adva-bid-band > div:last-child {
+    justify-self: start;
+  }
+  .adva-footer {
+    padding-top: 45px;
+  }
+  .adva-footer-top {
+    flex-wrap: wrap;
+    gap: 26px;
+    padding-bottom: 35px;
+  }
+  .adva-footer-top > p {
+    margin-left: auto;
+    font-size: 0.9rem;
+  }
+  .adva-footer-top > .adva-button {
+    margin-left: 0;
+    min-width: 180px;
+  }
+  .adva-footer .adva-wordmark strong {
+    font-size: 2.6rem;
+  }
+  .adva-footer-info {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    padding-block: 32px;
+  }
+  .adva-footer-info > div {
+    overflow-wrap: anywhere;
+    min-width: 0;
+  }
+  .adva-footer-info nav {
+    grid-column: 1;
+    gap: 30px;
+  }
+  .adva-footer-info .adva-eyebrow {
+    margin-bottom: 10px;
+  }
+  .adva-footer-bottom {
+    gap: 16px;
+    font-size: 0.65rem;
+  }
+  .adva-page-intro {
+    padding-top: 35px;
+  }
+  .adva-page-intro h1 {
+    font-size: clamp(2.8rem, 12vw, 4.5rem);
+    letter-spacing: -0.055em;
+  }
+  .adva-page-intro > div:not(.adva-gallery-filter) {
+    margin-top: 28px;
+  }
+  .adva-scope-nav {
+    gap: 8px 20px;
+    margin-top: 32px;
+  }
+  .adva-scope-nav a {
+    font-size: 0.8125rem;
+  }
+  .adva-service-detail {
+    padding-block: 40px;
+    grid-template-columns: 24px 1fr;
+    gap: 15px;
+  }
+  .adva-service-detail h2 {
+    font-size: 2.2rem;
+  }
+  .adva-service-detail ul {
+    grid-template-columns: 1fr;
+  }
+  .adva-service-detail-copy > p {
+    margin-top: 20px;
+  }
+  .adva-service-detail > div:last-child {
+    margin-top: 14px;
+  }
+  .adva-environmental-note {
+    padding: 25px;
+  }
+  .adva-environmental-note h3 {
+    font-size: 2rem;
+  }
+  .adva-gallery {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding-bottom: 65px;
+  }
+  .adva-gallery-item:nth-child(even) {
+    margin-top: 0;
+  }
+  .adva-gallery-item.portrait img {
+    aspect-ratio: 1.15;
+  }
+  .adva-gallery-filter {
+    gap: 8px;
+  }
+  .adva-gallery-filter button {
+    font-size: 0.8125rem;
+    padding: 11px 12px;
+  }
+  .adva-gallery-source {
+    font-size: 0.8125rem;
+  }
+  .adva-lightbox {
+    padding: 18px;
+  }
+  .adva-lightbox figure img {
+    height: 50dvh;
+  }
+  .adva-lightbox figcaption {
+    font-size: 0.875rem;
+  }
+  .adva-lightbox-controls {
+    gap: 14px;
+  }
+  .adva-lightbox-controls > .adva-button {
+    padding: 12px 14px;
+    font-size: 0.8rem;
+  }
+  .adva-bid-page {
+    padding-top: 32px;
+    padding-bottom: 70px;
+    gap: 35px;
+  }
+  .adva-bid-aside {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .adva-bid-aside h1 {
+    font-size: 3.25rem;
+  }
+  .adva-bid-aside > p {
+    font-size: 0.9375rem;
+  }
+  .adva-prototype-note {
+    padding: 16px;
+    font-size: 0.8125rem;
+  }
+  .adva-stepper {
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  .adva-stepper li {
+    font-size: 0.75rem;
+    gap: 4px;
+    padding-top: 12px;
+  }
+  .adva-bid-form-area h2 {
+    font-size: 2rem;
+  }
+  .adva-form-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+  .adva-form-grid > .wide {
+    grid-column: 1;
+  }
+  .adva-scope-field > div {
+    grid-template-columns: 1fr;
+  }
+  .adva-field legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .adva-form-actions {
+    gap: 12px;
+    margin-top: 28px;
+  }
+  .adva-form-actions > .adva-button {
+    padding: 14px 18px;
+  }
+  .adva-bid-review dl > div,
+  .adva-draft-ready dl > div {
+    grid-template-columns: 1fr;
+    gap: 3px;
+    margin-block: 15px;
+  }
+  .adva-directions-intro h1 {
+    font-size: 2.6rem;
+  }
+  .adva-direction-switch {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .adva-carbon-hero {
+    min-height: 690px;
+    padding-block: 55px;
+  }
+  .adva-carbon-copy h2 {
+    font-size: 3.4rem;
+    line-height: 1.03;
+  }
+  .adva-carbon-capabilities {
+    gap: 30px 22px;
+  }
+  .adva-carbon-capabilities h3 {
+    font-size: 1.15rem;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .adva-design *,
+  .adva-design *:before,
+  .adva-design *:after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .adva-design img {
+    transform: none !important;
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "rights_status": "Existing ADVA repository materials; ownership, releases and named project attribution require owner confirmation.",
+  "images": [
+    {
+      "output": "public/redesign/hero.webp",
+      "source": "public/hero.jpg",
+      "operation": "Resize to 1600px, WebP"
+    },
+    {
+      "output": "public/redesign/hero-mobile.webp",
+      "source": "public/hero.jpg",
+      "operation": "Mobile crop 760x660, WebP"
+    },
+    {
+      "output": "public/redesign/excavation.webp",
+      "source": "public/gallery/project2.jpg",
+      "operation": "Resize, WebP"
+    },
+    {
+      "output": "public/redesign/fieldwork.webp",
+      "source": "public/gallery/project3.jpg",
+      "operation": "Resize, WebP"
+    },
+    {
+      "output": "public/redesign/utilities.webp",
+      "source": "public/services/underground.jpg",
+      "operation": "Resize, WebP"
+    },
+    {
+      "output": "public/redesign/grading.webp",
+      "source": "public/gallery/project6.jpg",
+      "operation": "Resize, WebP"
+    },
+    {
+      "output": "public/redesign/site.webp",
+      "source": "public/services/paving.jpg",
+      "operation": "Resize, WebP"
+    },
+    {
+      "output": "public/redesign/trench.webp",
+      "source": "public/gallery/project4.jpg",
+      "operation": "Resize, WebP"
+    }
+  ],
+  "fonts": [
+    {
+      "family": "Archivo",
+      "source": "@fontsource-variable/archivo@5.3.0",
+      "license": "OFL-1.1"
+    },
+    {
+      "family": "IBM Plex Mono",
+      "source": "@fontsource/ibm-plex-mono@5.3.0",
+      "license": "OFL-1.1"
+    }
+  ],
+  "generated_photography": false,
+  "stock_photography_added": false
+}

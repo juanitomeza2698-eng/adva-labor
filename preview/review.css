@@ -1,0 +1,113 @@
+.review-shell {
+  background: #e1e3de;
+  color: #171a19;
+  min-height: 100vh;
+  font:
+    14px/1.5 Archivo,
+    Arial,
+    sans-serif;
+  padding-bottom: 30px;
+}
+.review-shell header {
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  background: #171a19;
+  color: #f4f4f0;
+}
+.review-shell header > div {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+.review-shell header strong {
+  letter-spacing: -0.03em;
+  font-size: 20px;
+}
+.review-shell header span {
+  font-size: 12px;
+  color: #c3c9c1;
+}
+.review-shell header a {
+  color: white;
+  text-underline-offset: 4px;
+  padding: 10px;
+}
+.review-shell nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  padding: 18px;
+}
+.review-shell nav label {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.review-shell select {
+  padding: 10px;
+  min-height: 44px;
+  border: 1px solid #b4b7b0;
+  background: #f4f4f0;
+  color: #171a19;
+  font: inherit;
+}
+.review-widths {
+  display: flex;
+  gap: 8px;
+}
+.review-widths button {
+  border: 1px solid #b4b7b0;
+  background: #f4f4f0;
+  padding: 12px 14px;
+  min-height: 44px;
+  font: inherit;
+  cursor: pointer;
+}
+.review-widths button[aria-pressed="true"] {
+  background: #6d28d9;
+  color: white;
+  border-color: #6d28d9;
+}
+.review-shell button:focus-visible,
+.review-shell select:focus-visible,
+.review-shell a:focus-visible {
+  outline: 3px solid #6d28d9;
+  outline-offset: 4px;
+}
+.review-shell output {
+  font-size: 12px;
+}
+.review-frame-box {
+  margin-inline: auto;
+  background: white;
+  box-shadow: 0 12px 30px #0002;
+  overflow: hidden;
+}
+.review-frame-box iframe {
+  border: 0;
+  background: #f4f4f0;
+  display: block;
+}
+.review-note {
+  font-size: 12px;
+  text-align: center;
+  margin: 20px 25px;
+  color: #555b57;
+}
+@media (max-width: 700px) {
+  .review-shell header span {
+    display: none;
+  }
+  .review-shell nav {
+    gap: 14px;
+  }
+  .review-widths {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
