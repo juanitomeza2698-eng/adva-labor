@@ -1,0 +1,329 @@
+[
+  {
+    "client": 305,
+    "documentWidth": 305,
+    "fontStatus": "loaded",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign",
+    "viewport": 320,
+    "visibleOverflow": [],
+    "expectedWidth": 320
+  },
+  {
+    "client": 375,
+    "documentWidth": 375,
+    "fontStatus": "loaded",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign",
+    "viewport": 390,
+    "visibleOverflow": [],
+    "expectedWidth": 390
+  },
+  {
+    "client": 753,
+    "documentWidth": 753,
+    "fontStatus": "loaded",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign",
+    "viewport": 768,
+    "visibleOverflow": [],
+    "expectedWidth": 768
+  },
+  {
+    "client": 1009,
+    "documentWidth": 1009,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign",
+    "viewport": 1024,
+    "visibleOverflow": [],
+    "expectedWidth": 1024
+  },
+  {
+    "client": 1425,
+    "documentWidth": 1425,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign",
+    "viewport": 1440,
+    "visibleOverflow": [],
+    "expectedWidth": 1440
+  },
+  {
+    "client": 305,
+    "documentWidth": 305,
+    "fontStatus": "loaded",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/services",
+    "viewport": 320,
+    "visibleOverflow": [],
+    "expectedWidth": 320
+  },
+  {
+    "client": 375,
+    "documentWidth": 375,
+    "fontStatus": "loaded",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/services",
+    "viewport": 390,
+    "visibleOverflow": [],
+    "expectedWidth": 390
+  },
+  {
+    "client": 753,
+    "documentWidth": 753,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/services",
+    "viewport": 768,
+    "visibleOverflow": [],
+    "expectedWidth": 768
+  },
+  {
+    "client": 1009,
+    "documentWidth": 1009,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/services",
+    "viewport": 1024,
+    "visibleOverflow": [],
+    "expectedWidth": 1024
+  },
+  {
+    "client": 1425,
+    "documentWidth": 1425,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/services",
+    "viewport": 1440,
+    "visibleOverflow": [],
+    "expectedWidth": 1440
+  },
+  {
+    "client": 305,
+    "documentWidth": 305,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/projects",
+    "viewport": 320,
+    "visibleOverflow": [],
+    "expectedWidth": 320
+  },
+  {
+    "client": 375,
+    "documentWidth": 375,
+    "fontStatus": "loaded",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/projects",
+    "viewport": 390,
+    "visibleOverflow": [],
+    "expectedWidth": 390
+  },
+  {
+    "client": 753,
+    "documentWidth": 753,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/projects",
+    "viewport": 768,
+    "visibleOverflow": [],
+    "expectedWidth": 768
+  },
+  {
+    "client": 1009,
+    "documentWidth": 1009,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/projects",
+    "viewport": 1024,
+    "visibleOverflow": [],
+    "expectedWidth": 1024
+  },
+  {
+    "client": 1425,
+    "documentWidth": 1425,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/projects",
+    "viewport": 1440,
+    "visibleOverflow": [],
+    "expectedWidth": 1440
+  },
+  {
+    "client": 305,
+    "documentWidth": 305,
+    "fontStatus": "loaded",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/bid",
+    "viewport": 320,
+    "visibleOverflow": [],
+    "expectedWidth": 320
+  },
+  {
+    "client": 375,
+    "documentWidth": 375,
+    "fontStatus": "loaded",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/bid",
+    "viewport": 390,
+    "visibleOverflow": [],
+    "expectedWidth": 390
+  },
+  {
+    "client": 753,
+    "documentWidth": 753,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/bid",
+    "viewport": 768,
+    "visibleOverflow": [],
+    "expectedWidth": 768
+  },
+  {
+    "client": 1009,
+    "documentWidth": 1009,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/bid",
+    "viewport": 1024,
+    "visibleOverflow": [],
+    "expectedWidth": 1024
+  },
+  {
+    "client": 1425,
+    "documentWidth": 1425,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/bid",
+    "viewport": 1440,
+    "visibleOverflow": [],
+    "expectedWidth": 1440
+  },
+  {
+    "client": 305,
+    "documentWidth": 305,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/directions",
+    "viewport": 320,
+    "visibleOverflow": [
+      {
+        "class": "",
+        "tag": "TABLE",
+        "text": "CriterionA / Carbon · FieldworkB / Concr"
+      },
+      {
+        "class": "",
+        "tag": "THEAD",
+        "text": "CriterionA / Carbon · FieldworkB / Concr"
+      },
+      {
+        "class": "",
+        "tag": "TR",
+        "text": "CriterionA / Carbon · FieldworkB / Concr"
+      },
+      {
+        "class": "",
+        "tag": "TH",
+        "text": "A / Carbon · Fieldwork"
+      },
+      {
+        "class": "",
+        "tag": "TH",
+        "text": "B / Concrete · Editorial"
+      }
+    ],
+    "expectedWidth": 320
+  },
+  {
+    "client": 375,
+    "documentWidth": 375,
+    "fontStatus": "loaded",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/directions",
+    "viewport": 390,
+    "visibleOverflow": [
+      {
+        "class": "",
+        "tag": "TABLE",
+        "text": "CriterionA / Carbon · FieldworkB / Concr"
+      },
+      {
+        "class": "",
+        "tag": "THEAD",
+        "text": "CriterionA / Carbon · FieldworkB / Concr"
+      },
+      {
+        "class": "",
+        "tag": "TR",
+        "text": "CriterionA / Carbon · FieldworkB / Concr"
+      },
+      {
+        "class": "",
+        "tag": "TH",
+        "text": "A / Carbon · Fieldwork"
+      },
+      {
+        "class": "",
+        "tag": "TH",
+        "text": "B / Concrete · Editorial"
+      }
+    ],
+    "expectedWidth": 390
+  },
+  {
+    "client": 753,
+    "documentWidth": 753,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/directions",
+    "viewport": 768,
+    "visibleOverflow": [],
+    "expectedWidth": 768
+  },
+  {
+    "client": 1009,
+    "documentWidth": 1009,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/directions",
+    "viewport": 1024,
+    "visibleOverflow": [],
+    "expectedWidth": 1024
+  },
+  {
+    "client": 1425,
+    "documentWidth": 1425,
+    "fontStatus": "loading",
+    "h1s": 1,
+    "main": true,
+    "path": "/redesign/directions",
+    "viewport": 1440,
+    "visibleOverflow": [],
+    "expectedWidth": 1440
+  }
+]

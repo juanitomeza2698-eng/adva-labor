@@ -69,14 +69,14 @@
   cursor: pointer;
 }
 .review-widths button[aria-pressed="true"] {
-  background: #6d28d9;
+  background: #8b2bb2;
   color: white;
-  border-color: #6d28d9;
+  border-color: #8b2bb2;
 }
 .review-shell button:focus-visible,
 .review-shell select:focus-visible,
 .review-shell a:focus-visible {
-  outline: 3px solid #6d28d9;
+  outline: 3px solid #8b2bb2;
   outline-offset: 4px;
 }
 .review-shell output {

@@ -76,7 +76,7 @@ export function BidPage({ local = false }: { local?: boolean }) {
       setErrors((current) => ({ ...current, [key]: undefined }));
     };
   const next = () => {
-    const allErrors = validateBid(bid);
+    const allErrors = validateBid(parseBid(bid));
     const fields: readonly (keyof BidDraft)[] = [
       ...bidSteps[step as 0 | 1 | 2],
       ...(step === 1 ? ["anticipatedStart" as const] : []),

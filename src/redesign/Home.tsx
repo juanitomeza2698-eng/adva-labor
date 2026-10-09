@@ -60,6 +60,7 @@ export function Home({ embedded = false }: { embedded?: boolean }) {
                 height="900"
                 loading="eager"
                 decoding="async"
+                fetchPriority="high"
               />
             </picture>
             <div className="adva-image-label">
@@ -185,7 +186,7 @@ export function Home({ embedded = false }: { embedded?: boolean }) {
             Colorado.
           </p>
           <div className="adva-contact-people">
-            {business.contacts.map((contact) => (
+              {business.contacts.map((contact) => (
               <div key={contact.name}>
                 <span>{contact.name}</span>
                 <a href={contact.href}>{contact.phone}</a>

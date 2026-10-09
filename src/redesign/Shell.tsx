@@ -7,9 +7,7 @@ import { MotionRoot } from "./Motion";
 export function Wordmark() {
   return (
     <span className="adva-wordmark">
-      <strong>
-        ADVA<span className="brand-period">.</span>
-      </strong>
+      <strong>ADVA</strong>
       <span>LABOR SERVICES INC.</span>
     </span>
   );

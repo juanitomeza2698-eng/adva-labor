@@ -19,9 +19,10 @@
   --white: #fff;
   --steel: #555b57;
   --line: #d5d6cf;
-  --brand: #6d28d9;
-  --brand-light: #c7aaff;
-  --error: #aa241d;
+  --brand: #8b2bb2;
+  --brand-light: #e2b9f1;
+  --oxide: #aa241d;
+  --error: var(--oxide);
   --space: clamp(24px, 4.4vw, 72px);
   background: var(--concrete);
   color: var(--carbon);
@@ -86,6 +87,7 @@
   letter-spacing: -0.045em;
   line-height: 1.04;
   text-wrap: balance;
+  overflow-wrap: anywhere;
 }
 .adva-design h1 {
   font-size: clamp(3.25rem, 7.55vw, 7.4rem);
@@ -145,7 +147,7 @@
 .adva-preview-notice > span:first-child {
   font-family: "IBM Plex Mono", monospace;
   letter-spacing: 0.05em;
-  color: #c7aaff;
+  color: var(--brand-light);
 }
 .adva-preview-notice a {
   margin-left: auto;
@@ -232,7 +234,7 @@
   background: var(--brand);
 }
 .adva-button-brand:hover {
-  background: #5320a5;
+  background: #6f238e;
 }
 .adva-button-white {
   background: var(--white);
@@ -404,7 +406,7 @@
 }
 .adva-hero-footnote .adva-mono {
   color: var(--steel);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 .adva-hero-image {
   margin-top: 24px !important;
@@ -431,7 +433,7 @@
   gap: 5px;
 }
 .adva-image-label .adva-mono {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   color: var(--steel);
 }
 .adva-image-label > span:last-child {
@@ -439,7 +441,7 @@
 }
 .adva-hero-image figcaption {
   font:
-    400 0.65rem/1.6 "IBM Plex Mono",
+    400 0.75rem/1.6 "IBM Plex Mono",
     monospace;
   display: flex;
   justify-content: space-between;
@@ -505,7 +507,7 @@
   line-height: 1.15;
 }
 .adva-service-list p {
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #c4c9c3;
   margin-top: 12px;
   line-height: 1.6;
@@ -561,7 +563,7 @@
   font-size: 1rem;
 }
 .adva-work-pair figcaption > span:first-child {
-  font: 0.7rem/1.6 "IBM Plex Mono";
+  font: 0.75rem/1.6 "IBM Plex Mono";
   color: var(--steel);
 }
 .adva-work-secondary {
@@ -696,7 +698,7 @@
   display: flex;
   justify-content: space-between;
   gap: 24px;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   color: #c3c9c1;
 }
 .adva-footer-bottom > span:nth-child(2) {
@@ -786,7 +788,7 @@
   object-fit: cover;
 }
 .adva-service-detail figcaption {
-  font: 0.7rem/1.6 "IBM Plex Mono";
+  font: 0.75rem/1.6 "IBM Plex Mono";
   padding-top: 12px;
   color: var(--steel);
 }
@@ -1355,7 +1357,7 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 30px;
 }
-.adva-carbon-capabilities > div {
+.adva-carbon-capabilities > a {
   border-top: 1px solid #51554e;
   padding-top: 20px;
 }
@@ -1365,6 +1367,75 @@
 .adva-carbon-capabilities h3 {
   font-size: 1.4rem;
   margin-top: 15px;
+}
+.adva-carbon-capabilities > a:hover h3 {
+  color: var(--brand-light);
+}
+.adva-carbon-index {
+  position: absolute;
+  z-index: 1;
+  top: 32px;
+  right: var(--space);
+  color: #fff;
+  padding-block: 12px;
+  border-top: 1px solid #ffffff66;
+}
+.adva-carbon-story,
+.adva-carbon-contact {
+  padding-block: 85px;
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 100px;
+  align-items: center;
+  border-top: 1px solid #51554e;
+}
+.adva-carbon-story h2,
+.adva-carbon-contact h2 {
+  margin-top: 28px;
+}
+.adva-carbon-story p,
+.adva-carbon-contact p {
+  margin-top: 25px;
+  max-width: 420px;
+  color: #d5d8d3;
+}
+.adva-carbon-story .adva-text-link {
+  margin-top: 25px;
+}
+.adva-carbon-story img {
+  width: 100%;
+  aspect-ratio: 1.1;
+  object-fit: cover;
+}
+.adva-carbon-story figcaption {
+  margin-top: 16px;
+  font: 0.75rem/1.6 "IBM Plex Mono", monospace;
+  color: #d5d8d3;
+}
+.adva-carbon-contact > div:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  align-items: center;
+}
+.adva-carbon-contact p {
+  flex-basis: 100%;
+  margin: 0;
+}
+.adva-carbon :focus-visible,
+.adva-footer :focus-visible,
+.adva-services-summary :focus-visible {
+  outline-color: var(--brand-light);
+}
+.adva-directions-table:focus-visible {
+  outline: 3px solid var(--brand);
+  outline-offset: 5px;
+}
+.adva-hero-grid > *,
+.adva-company > *,
+.adva-bid-page > *,
+.adva-service-detail > * {
+  min-width: 0;
 }
 .adva-direction-caption {
   padding: 25px var(--space);
@@ -1485,7 +1556,7 @@
     padding: 12px 16px;
   }
   .adva-hero-image figcaption {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     flex-direction: column;
     gap: 2px;
   }
@@ -1620,13 +1691,13 @@
   .adva-preview-notice {
     gap: 10px;
     padding-block: 7px;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
   .adva-preview-notice > span:nth-child(2) {
     display: none;
   }
   .adva-preview-notice a {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
   }
   .adva-header {
     height: 83px;
@@ -1683,13 +1754,13 @@
     padding: 10px 14px;
   }
   .adva-image-label .adva-mono {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
   }
   .adva-image-label > span:last-child {
     font-size: 0.8rem;
   }
   .adva-hero-image figcaption {
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     flex-direction: row;
     gap: 10px;
   }
@@ -1697,7 +1768,7 @@
     display: none;
   }
   .adva-hero-index .adva-eyebrow {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     letter-spacing: 0.03em;
   }
   .adva-hero-scope-line {
@@ -1727,7 +1798,7 @@
     font-size: 1.45rem;
   }
   .adva-service-list p {
-    font-size: 0.875rem;
+    font-size: 1rem;
   }
   .adva-services-summary .adva-text-link:hover {
     color: var(--brand-light);
@@ -1810,7 +1881,7 @@
   }
   .adva-footer-bottom {
     gap: 16px;
-    font-size: 0.65rem;
+    font-size: 0.75rem;
   }
   .adva-page-intro {
     padding-top: 35px;
@@ -1981,4 +2052,12 @@
   .adva-design img {
     transform: none !important;
   }
+}
+
+@media (max-width: 800px) {
+  .adva-carbon-story, .adva-carbon-contact { gap: 36px; padding-block: 60px; }
+}
+@media (max-width: 600px) {
+  .adva-carbon-story, .adva-carbon-contact { grid-template-columns: 1fr; padding-block: 45px; }
+  .adva-carbon-index { display: none; }
 }

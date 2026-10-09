@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import { Home } from "./Home";
-import { services } from "./content";
+import { services, business } from "./content";
 
 export function DirectionsPage() {
   const [direction, setDirection] = useState("concrete");
@@ -25,39 +25,39 @@ export function DirectionsPage() {
           One industrial identity.
         </h1>
         <p>
-          Both use ADVA’s existing photography and violet brand accent. Concrete
-          / Editorial is recommended for its distinction, readable scope
-          information, and direct bid workflow.
+          Two compositions built around ADVA’s field photography and existing
+          violet accent. Concrete / Editorial is recommended for estimators
+          who need to review capabilities and define a bid scope.
         </p>
-        <div className="adva-directions-table">
+        <div className="adva-directions-table" role="region" aria-label="Design comparison" tabIndex={0}>
           <table>
             <thead>
               <tr>
-                <th>Criterion</th>
-                <th>A / Carbon · Fieldwork</th>
-                <th>B / Concrete · Editorial</th>
+                <th scope="col">Criterion</th>
+                <th scope="col">A / Carbon · Fieldwork</th>
+                <th scope="col">B / Concrete · Editorial</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th>Credibility</th>
-                <td>Established industrial presence</td>
-                <td>Clear, organized, evidence-led</td>
+                <th scope="row">Credibility</th>
+                <td>Field photography carries the industrial presence</td>
+                <td>Clear scopes and organized project information</td>
               </tr>
               <tr>
-                <th>Uniqueness</th>
-                <td>Familiar full-image construction composition</td>
+                <th scope="row">Uniqueness</th>
+                <td>Cinematic scale with restrained technical markings</td>
                 <td>Asymmetric layout with strong typographic rhythm</td>
               </tr>
               <tr>
-                <th>Usability</th>
-                <td>High contrast; dense on smaller screens</td>
-                <td>Open spacing; scopes and forms are easier to scan</td>
+                <th scope="row">Usability</th>
+                <td>Image-first introduction; high contrast controls</td>
+                <td>Scope-first reading; open spacing and clear hierarchy</td>
               </tr>
               <tr>
-                <th>Commercial focus</th>
-                <td>Immediate visual impact</td>
-                <td>Balances fieldwork with a clear bid path</td>
+                <th scope="row">Commercial focus</th>
+                <td>Immediate field presence and a prominent bid action</td>
+                <td>Capabilities, field records, and a qualified bid path</td>
               </tr>
             </tbody>
           </table>
@@ -87,7 +87,7 @@ export function DirectionsPage() {
             ? "A / CARBON · FIELDWORK"
             : "B / CONCRETE · EDITORIAL"}
         </strong>
-        <span>Homepage composition · authentic ADVA source photography</span>
+        <span>Homepage composition · ADVA’s existing field photography</span>
       </div>
       {direction === "concrete" ? (
         <Home embedded />
@@ -100,6 +100,7 @@ export function DirectionsPage() {
               width="1600"
               height="900"
             />
+            <span className="adva-carbon-index adva-mono" aria-hidden="true">ADVA / FIELD RECORD 01</span>
             <div className="adva-carbon-copy">
               <span className="adva-eyebrow">
                 COLORADO / HEAVY CIVIL & SITE DEVELOPMENT
@@ -130,12 +131,28 @@ export function DirectionsPage() {
           </div>
           <div className="adva-carbon-capabilities">
             {services.map((s) => (
-              <div key={s.id}>
+              <a key={s.id} href={`/redesign/services#${s.id}`}>
                 <span className="adva-mono">{s.number} /</span>
                 <h3>{s.title}</h3>
-              </div>
+              </a>
             ))}
           </div>
+          <section className="adva-carbon-story adva-container">
+            <div>
+              <span className="adva-eyebrow">FIELDWORK / COLORADO</span>
+              <h2>From the surface.<br />To what’s below.</h2>
+              <p>Excavation, grading, and underground utilities. Explore the work in the field, then tell us what your site needs.</p>
+              <a href="/redesign/projects" className="adva-text-link">Explore fieldwork</a>
+            </div>
+            <figure>
+              <img src="/redesign/utilities.webp" width="900" height="1200" loading="lazy" decoding="async" alt={services[2].alt} />
+              <figcaption>UNDERGROUND UTILITIES / ADVA LABOR</figcaption>
+            </figure>
+          </section>
+          <section className="adva-carbon-contact adva-container">
+            <div><span className="adva-eyebrow">NEXT PROJECT</span><h2>Let’s define<br />the scope.</h2></div>
+            <div><p>Share the project location, scope, and bid deadline.</p><a href="/redesign/bid" className="adva-button adva-button-brand">Request a bid</a><a href={business.officeHref} className="adva-text-link">{business.office}</a></div>
+          </section>
         </section>
       )}
     </>
